@@ -22,7 +22,7 @@ class RutasUsuario {
   public configurarRutas(): void {
     // Ruta para obtener todos los usuarios
     this.rutasUsuarioAPI.get(
-      "/getall",
+      "/getAll",
       controladorUsuarioConsulta.llamarObtenerTodos
     );
 
