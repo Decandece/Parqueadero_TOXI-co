@@ -11,6 +11,7 @@ import rutaLoginApi from "../../app/login/route/RutaLogin";
 import security from "../../middleware/Security";
 import rutasVehiculoAPI from "../../app/vehiculo/route/RutasVehiculo";
 import rutasUsuarioAPI from "../../app/usuario/route/RutasUsuario";
+import rutaTarifasDiariasApi from "../../app/tarifa_diaria/route/RutaTarifaDiaria";
 
 dotenv.config();
 
@@ -49,6 +50,8 @@ class Servidor {
 
     //usuario
     this.app.use("/api/usuario", rutasUsuarioAPI);
+
+    this.app.use("/api/tarifa-diaria", rutaTarifasDiariasApi);
   }
 
   public start(): void {
